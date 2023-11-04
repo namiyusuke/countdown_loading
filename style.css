@@ -1,0 +1,40 @@
+body::after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+}
+body.is-finish::after {
+  transform: translateY(-100%);
+}
+.counter {
+  z-index: 100;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 50%;
+  display: flex;
+  height: 100px;
+  font-size: 100px;
+  line-height: 102px;
+  clip-path: polygon(0 0, 100% 0, 100% 100px, 0 100px);
+  font-weight: 400;
+}
+.counter-1,
+.counter-2,
+.counter-3 {
+  position: relative;
+  /* right: -25px; */
+}
+.num1offset2 {
+  position: relative;
+  /* right: -10px; */
+}
+.counter {
+  color: #fff;
+}
